@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juego Ahorcado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+
+        #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        body {
+            background-color: beige;
+        }
+
+        canvas {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        <h1>Juego de Ahorcado</h1>
+    </div>
+    <div id="contador" align="center"></div>
+    <div align="center">
+        <canvas id="mi_ahorcado" width="500" height="600" style="border:1px solid #000000;">
+        </canvas>
+    </div>
+    <div align="center">
+        Nivel de Dificultad: &nbsp;
+        <strong>
+            <div id="nivel_dificultad" align="center"></div>
+        </strong>
+        <input type="range" id="nivel_dificultad_select" min="1" max="3" step="1" value="1" onchange="generar_palabra()">
+    </div>
+    <div id="palabra" align="center"></div>
+    <div align="center">
+        <p>
+            <h2>
+                Ingrese la letra:
+            </h2>
+            <input type="text" id="letra">
+            <button onclick="validar()">validar</button>
+        </p>
+    </div>
+    <div align="center">
+        <button onclick="banderaTrue()">Iniciar/Continuar</button>
+        <button onclick="banderaFalse()">Pausar</button>
+        <button onclick="ayuda()">Pista</button>
+        <button onclick="reiniciar()">Reiniciar</button>
+    </div>
+    <div id="snackbar"></div>
+    <script src="fuente.js"></script>
+</body>
+
+</html>
