@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            background-color: darkgrey;
+        }
+    </style>
+    <title>SW</title>
+</head>
+
+<body>
+    <div class="row justify-content-md-center">
+        <div class="col-sm">
+            <div class="row justify-content-md-center" id="title">
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="alert alert-dark " role="alert">
+                USE OF THE STAR WARS API
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="row justify-content-md-center" id="page">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" onclick="firstQuery('planets')" class="btn btn-secondary">Planets</button>
+            <button type="button" onclick="firstQuery('starships')" class="btn btn-secondary">Starships</button>
+            <button type="button" onclick="firstQuery('vehicles')" class="btn btn-secondary">Vehicles</button>
+            <button type="button" onclick="firstQuery('people')" class="btn btn-secondary">People</button>
+            <button type="button" onclick="firstQuery('films')" class="btn btn-secondary">Films</button>
+            <button type="button" onclick="firstQuery('species')" class="btn btn-secondary">Species</button>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center" id="body">
+    </div>
+
+    <div class="row justify-content-md-center" id="parts">
+    </div>
+    <div class="container">
+        <div class="row justify-content-md-center" id="image">
+        </div>
+        <div class="row justify-content-md-center" id="card">
+        </div>
+    </div>
+
+    <script src="fuente.js"></script>
+</body>
+
+</html>
